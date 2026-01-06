@@ -1,2 +1,2 @@
 # SensorAccumulator
-Subject Sensor วชิรวิชญ์ ดำช่วย กฤติน บุญคล่อง
+Subject Sensor กฤติน บุญคล่อง

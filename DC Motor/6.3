@@ -1,0 +1,40 @@
+// SLAB6.3 domotorPWM
+// https://app.cirkitdesigner.com/project/383021ce-c989-47c4-8269-810300e090a2
+
+#define motorR1_pin 2
+#define motorR2_pin 3
+#define EN_B_pin    4
+
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(motorR1_pin, OUTPUT);
+  pinMode(motorR2_pin, OUTPUT);
+  pinMode(EN_B_pin, OUTPUT);
+
+  
+  digitalWrite(motorR1_pin, 0);
+  digitalWrite(motorR2_pin, 0);
+}
+
+void loop() {
+  analogWrite(EN_B_pin, 125);
+
+  digitalWrite(motorR1_pin, 1);
+  digitalWrite(motorR2_pin, 0);
+  delay(1000);
+
+  analogWrite(EN_B_pin, 125);
+  
+  digitalWrite(motorR1_pin, 0);
+  digitalWrite(motorR2_pin, 1);
+  delay(2000);
+
+  analogWrite(EN_B_pin, 255);
+
+  digitalWrite(motorR1_pin, 255);
+  digitalWrite(motorR2_pin, 0);
+  delay(3000);
+  
+  
+}
